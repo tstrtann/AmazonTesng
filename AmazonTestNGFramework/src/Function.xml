@@ -1,0 +1,18 @@
+<!-- thread-count = "(tests running at a time)" -->
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd"> 
+<suite name="Regression" parallel="tests" thread-count="2">
+ <listeners>
+  <listener class-name="iListeners.Listeners"></listener>
+ </listeners>
+ 
+   <parameter name="website" value="https://www.amazon.com"></parameter>
+
+	<test name="AmazonPractice">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="PIIT.Training.AmazonTestNGFramework.AmazonToPurchase"></class>
+		</classes>
+	</test>
+	
+</suite> 
